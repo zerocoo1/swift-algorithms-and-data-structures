@@ -33,6 +33,10 @@ class Stack<T: Equatable> {
     }
 }
 
+///////////////
+// TEST AREA //
+///////////////
+
 let newStack = Stack<Int>()
 
 newStack.isEmpty
