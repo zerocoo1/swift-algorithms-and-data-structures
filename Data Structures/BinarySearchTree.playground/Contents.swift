@@ -9,8 +9,8 @@ import UIKit
 class TreeNode<T: Comparable> {
     
     var data: T
-    var leftChield: TreeNode<T>?
-    var rightChield: TreeNode<T>?
+    var leftChild: TreeNode<T>?
+    var rightChild: TreeNode<T>?
     
     init(data: T) {
         self.data = data
@@ -21,12 +21,12 @@ class TreeNode<T: Comparable> {
             return self
         }
         
-        if data > self.data && rightChield != nil {
-            return rightChield?.find(data)
+        if data > self.data && rightChild != nil {
+            return rightChild?.find(data)
         }
         
-        if leftChield != nil {
-            return leftChield?.find(data)
+        if leftChild != nil {
+            return leftChild?.find(data)
         }
         
         return nil
@@ -38,16 +38,16 @@ class TreeNode<T: Comparable> {
         }
         
         if data > self.data {
-            if rightChield != nil {
-                rightChield?.insert(data)
+            if rightChild != nil {
+                rightChild?.insert(data)
             } else {
-                rightChield = TreeNode<T>(data: data)
+                rightChild = TreeNode<T>(data: data)
             }
         } else {
-            if leftChield != nil {
-                leftChield?.insert(data)
+            if leftChild != nil {
+                leftChild?.insert(data)
             } else {
-                leftChield = TreeNode<T>(data: data)
+                leftChild = TreeNode<T>(data: data)
             }
         }
     }
@@ -88,10 +88,10 @@ class BinarySearchTree<T: Comparable> {
             parentNode = curNode
             
             if data < curNode?.data {
-                curNode = curNode?.leftChield
+                curNode = curNode?.leftChild
                 isLeftChild = true
             } else {
-                curNode = curNode?.rightChield
+                curNode = curNode?.rightChild
                 isLeftChild = false
             }
         }
@@ -100,70 +100,70 @@ class BinarySearchTree<T: Comparable> {
             return
         }
         
-        if curNode?.leftChield == nil && curNode?.rightChield == nil {
+        if curNode?.leftChild == nil && curNode?.rightChild == nil {
             if curNode?.data == root?.data {
                 root = nil
             } else {
                 if isLeftChild {
-                    parentNode?.leftChield = nil
+                    parentNode?.leftChild = nil
                 } else {
-                    parentNode?.rightChield = nil
+                    parentNode?.rightChild = nil
                 }
             }
-        } else if curNode?.rightChield == nil {
+        } else if curNode?.rightChild == nil {
             if curNode?.data == root?.data {
-                root = root?.leftChield
+                root = root?.leftChild
             } else if isLeftChild {
-                parentNode?.leftChield = curNode?.leftChield
+                parentNode?.leftChild = curNode?.leftChild
             } else {
-                parentNode?.rightChield = curNode?.leftChield
+                parentNode?.rightChild = curNode?.leftChild
             }
-        } else if curNode?.leftChield == nil {
+        } else if curNode?.leftChild == nil {
             if curNode?.data == root?.data {
-                root = root?.rightChield
+                root = root?.rightChild
             } else if isLeftChild {
-                parentNode?.leftChield = curNode?.rightChield
+                parentNode?.leftChild = curNode?.rightChild
             } else {
-                parentNode?.rightChield = curNode?.rightChield
+                parentNode?.rightChild = curNode?.rightChild
             }
         }
         
         // for node with two childs
         
-        if curNode?.leftChield != nil && curNode?.rightChield != nil {
+        if curNode?.leftChild != nil && curNode?.rightChild != nil {
             var successorParentNode = curNode
-            var successorNode = curNode?.rightChield
+            var successorNode = curNode?.rightChild
             
-            if successorNode?.leftChield == nil {
-                successorNode?.leftChield = curNode?.leftChield
+            if successorNode?.leftChild == nil {
+                successorNode?.leftChild = curNode?.leftChild
                 
             } else {
                 
-                while successorNode?.leftChield != nil && successorNode?.rightChield != nil {
+                while successorNode?.leftChild != nil && successorNode?.rightChild != nil {
                     successorParentNode = successorNode
-                    successorNode = successorNode?.leftChield
+                    successorNode = successorNode?.leftChild
                 }
                 
-                successorNode?.rightChield = curNode?.rightChield
-                successorNode?.leftChield = curNode?.leftChield
-                successorParentNode?.leftChield = nil
+                successorNode?.rightChild = curNode?.rightChild
+                successorNode?.leftChild = curNode?.leftChild
+                successorParentNode?.leftChild = nil
             }
             
             if isLeftChild {
-                parentNode?.leftChield = successorNode
+                parentNode?.leftChild = successorNode
             } else {
-                parentNode?.rightChield = successorNode
+                parentNode?.rightChild = successorNode
             }
         }
     }
     
     func printOut(node: TreeNode<T>) {
-        print("======\n|data: \(node.data)|\n|left: \(node.leftChield?.data) right: \(node.rightChield?.data)|")
-        if node.leftChield != nil {
-            printOut(node.leftChield!)
+        print("======\n|data: \(node.data)|\n|left: \(node.leftChild?.data) right: \(node.rightChild?.data)|")
+        if node.leftChild != nil {
+            printOut(node.leftChild!)
         }
-        if node.rightChield != nil {
-            printOut(node.rightChield!)
+        if node.rightChild != nil {
+            printOut(node.rightChild!)
         }
         
     }
