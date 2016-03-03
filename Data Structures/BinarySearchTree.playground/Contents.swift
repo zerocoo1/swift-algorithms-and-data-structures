@@ -4,7 +4,7 @@
 
 import UIKit
 
-// Binary Tree
+// Binary Search Tree
 
 class TreeNode<T: Comparable> {
     
@@ -197,14 +197,3 @@ bTree.delete(90)
 bTree.printOut(bTree.root!)
 
 print(bTree.find(78))
-
-
-
-
-
-
-
-
-
-
-
