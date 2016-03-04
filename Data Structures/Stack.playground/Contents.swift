@@ -1,5 +1,5 @@
 // Andrey Vysher 2016
-// Algorithms and data structures
+// Swift Algorithms and data structures
 // https://github.com/zerocool0686/swift-algorithms-and-data-structures
 
 import UIKit
