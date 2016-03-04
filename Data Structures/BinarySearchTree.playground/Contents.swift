@@ -192,7 +192,7 @@ bTree.insert(88)
 bTree.insert(102)
 
 bTree.delete(78)
-bTree.delete(90)
+//bTree.delete(90)
 
 bTree.printOut(bTree.root!)
 
