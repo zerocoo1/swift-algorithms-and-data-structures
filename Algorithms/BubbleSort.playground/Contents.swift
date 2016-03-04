@@ -5,6 +5,7 @@
 import UIKit
 
 // BubbleSort
+// Algorithm complexity: O(n^2)
 
 func bubbleSort(arr: [Int]) -> [Int] {
     
