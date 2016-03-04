@@ -10,3 +10,8 @@
 * [Linced List](https://github.com/zerocool0686/swift-algorithms-and-data-structures/blob/master/Data%20Structures/Linked%20List.playground/Contents.swift)
 * [Doubly Linked List](https://github.com/zerocool0686/swift-algorithms-and-data-structures/blob/master/Data%20Structures/Doubly%20Linked%20List.playground/Contents.swift)
 * [Binary Search Tree](https://github.com/zerocool0686/swift-algorithms-and-data-structures/blob/master/Data%20Structures/BinarySearchTree.playground/Contents.swift)
+
+###Algorithms:
+#####Sorting:
+* [Buuble Sort](https://github.com/zerocool0686/swift-algorithms-and-data-structures/blob/master/Algorithms/BubbleSort.playground/Contents.swift)
+
