@@ -14,4 +14,5 @@
 ###Algorithms:
 #####Sorting:
 * [Buuble Sort](https://github.com/zerocool0686/swift-algorithms-and-data-structures/blob/master/Algorithms/BubbleSort.playground/Contents.swift)
+* [Selection Sort](https://github.com/zerocool0686/swift-algorithms-and-data-structures/blob/master/Algorithms/SelectionSort.playground/Contents.swift)
 
