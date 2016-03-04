@@ -8,7 +8,7 @@ func selectionSort(var arr: [Int]) -> [Int] {
     
     var minIndex: Int
     
-    for a in 0..<arr.count {
+    for a in 0..<arr.count - 1 {
         
         minIndex = a
         
