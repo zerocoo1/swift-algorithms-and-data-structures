@@ -1,6 +1,6 @@
 ![Swift algorithms and data structures](https://s-media-cache-ak0.pinimg.com/564x/5e/22/7f/5e227f01b9c6f7c1646425026ec17c33.jpg)
 
-# Swift algorithms and data structures
+# Swift Algorithms and Data Structures
 
 ###Data structures:
 
@@ -16,5 +16,7 @@
 * [Buuble Sort](https://github.com/zerocool0686/swift-algorithms-and-data-structures/blob/master/Algorithms/BubbleSort.playground/Contents.swift)
 * [Selection Sort](https://github.com/zerocool0686/swift-algorithms-and-data-structures/blob/master/Algorithms/SelectionSort.playground/Contents.swift)
 * [Insertion Sort](https://github.com/zerocool0686/swift-algorithms-and-data-structures/blob/master/Algorithms/InsertionSort.playground/Contents.swift)
+
+
 
 
